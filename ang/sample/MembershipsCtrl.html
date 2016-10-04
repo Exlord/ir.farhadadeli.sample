@@ -1,0 +1,29 @@
+<div class="crm-container">
+    <div crm-ui-debug="memberships"></div>
+
+    <form name="myForm" crm-ui-id-scope ng-submit="ctrl.search()">
+
+        <div crm-ui-accordion="{title: ctrl.ts('Greeting')}">
+
+            <div class="crm-block">
+                <h3>Filter By Start Date</h3>
+                <div crm-ui-field="{name: 'myForm.start_date_from', title: ctrl.ts('Start Date From'), help: ctrl.hs('start_date_from')}">
+                    <input crm-ui-datepicker="{time: false}" ng-model="ctrl.filter.start_date_from"/>
+                </div>
+                <div crm-ui-field="{name: 'myForm.start_date_to', title: ctrl.ts('Start Date To'), help: ctrl.hs('start_date_to')}">
+                    <input crm-ui-datepicker="{time: false}" ng-model="ctrl.filter.start_date_to"/>
+                </div>
+            </div>
+            <input type="submit" name="submit" value="Search">
+        </div>
+
+        <table datatable=""
+               class="row-border hover"
+               dt-options="ctrl.dtOptions"
+               dt-columns="ctrl.dtColumns"
+               dt-instance="ctrl.dtInstance">
+        </table>
+
+    </form>
+
+</div>

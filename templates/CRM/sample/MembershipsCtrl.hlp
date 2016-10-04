@@ -1,0 +1,6 @@
+{htxt id="start_date_from"}
+{ts}this is the help text for start_date_from.{/ts}
+{/htxt}
+{htxt id="start_date_to"}
+{ts}this is the help text for start_date_to.{/ts}
+{/htxt}
